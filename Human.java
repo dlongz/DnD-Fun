@@ -15,7 +15,11 @@ public class Human {
         this.health = health;
     }
 
-    public void attack(Human){
-        Human.health = Human.health - this.strength;
+    public void attack(Human opponant){
+        opponant.health = opponant.health - this.strength;
+        System.out.printf("""
+                            First human swings and connects on the next human!\n
+                            Hitting with a strength of %d.\n
+                            This will take down the next human to %d""",this.strength, opponant.health);
     }
 }
